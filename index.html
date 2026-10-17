@@ -1,13 +1,621 @@
-<h1>Hello!</h1> 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>王畅 · 个人主页</title>
+  <meta name="description" content="Sqyl 的个人主页：学习经历、工作经历、项目介绍与工作之外。">
+  <meta name="theme-color" content="#f8f7f4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230f766e'/%3E%3Ctext%20x='32'%20y='44'%20font-size='36'%20font-family='sans-serif'%20font-weight='700'%20fill='%23fff'%20text-anchor='middle'%3E%E7%8E%8B%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
 
-<p>Here is Wang Chang (SqyL) who is a 1st year master student on computer science at the University of Macau.
-</p>
-<p>
-I'm learning and am interested in Computer Graphics, and trying to learn OpenGL and build my own renderer now.
-</p>
-<p>
-If you hope to know something about the University of Macau or myself, please email to aaronwongsakura@outlook.com, and I will check and respond them.
-</p>
-<p>
-Thank you!
-</p>
+  <!-- ========== 顶部导航 ========== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">王畅<span class="brand-sub">· 个人主页</span></a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#education">学习经历</a>
+        <a href="#career">工作经历</a>
+        <a href="#projects">项目介绍</a>
+        <a href="#beyond">工作之外</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== 首屏 ========== -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="hero-kicker">Personal Site · 2026</p>
+        <h1>王畅</h1>
+        <p class="hero-line">澳门大学 计算机科学硕士 · 2026 届 · 中 / 英 / 日</p>
+        <div class="chips hero-chips">
+          <span class="chip">PyTorch</span><span class="chip">Diffusers</span><span class="chip">FAISS</span><span class="chip">RAG</span><span class="chip">Multi-Agent</span><span class="chip">Prompt Engineering</span><span class="chip">AI 协作开发</span>
+        </div>
+        <p class="hero-jp">よろしくお願いします</p>
+        <p class="hero-note">标题与卡片均可点击展开详情</p>
+      </div>
+    </section>
+
+    <!-- ========== 01 学习经历（标题点击展开详细说明） ========== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-no">01</span>
+          <h2>学习经历</h2>
+          <span class="sec-en">Education</span>
+          <span class="sec-rule" aria-hidden="true"></span>
+        </div>
+        <ol class="timeline">
+          <li class="exp-item reveal">
+            <div class="t-time">2023 – 2026</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">计算机科学 · 理学硕士<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">澳门大学 · 全英文授课</div>
+            <p class="t-desc">研究方向：多模态模型应用 · 毕业课题 Suishipai（MLLM 智能饮食管理助手）</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>核心课程：计算机视觉、强化学习、计算机图形学等</p>
+                    <p>毕业课题：<em>Suishipai: A Multimodal Large Language Model-Based Intelligent Diet Management Assistant with RAG-Enhanced Personalized Nutrition Analysis</em></p>
+                    <div class="chips">
+                      <span class="chip">MLLM</span><span class="chip">Agent</span><span class="chip">RAG</span><span class="chip">APP</span>
+                    </div>
+                    <div class="t-links">
+                      <span>产品已下线 · suishipai.cn</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="exp-item reveal">
+            <div class="t-time">2017 – 2021</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">物联网工程 · 工学学士<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">河北工业大学 · 统招本科</div>
+            <p class="t-desc">毕业设计：YunDays 云日程——基于 Android 的学生日程安排及时间规划 APP</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>毕业设计：基于 Android 的学生日程安排及时间规划 APP「云日程 YunDays」，移动端与后端前后端分离。</p>
+                    <p>功能：账号体系、日历日程管理（闹钟提醒）、课程表、学习打卡（计时器）与朋友圈动态（发表 / 浏览）、好友（添加 / 管理），本地 SQLite 离线缓存。</p>
+                    <p>技术：Android（Java · Material · Volley / Glide），后端 Spring Boot + MyBatis + MySQL，Controller / Service / Dao 三层架构，MyBatis Generator 生成数据层。</p>
+                    <div class="chips">
+                      <span class="chip">Android</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">MyBatis</span><span class="chip">MySQL</span><span class="chip">SQLite</span>
+                    </div>
+                    <div class="t-links">
+                      <a href="https://github.com/Sqyl/YunDays-APP" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>前端仓库 YunDays-APP</a>
+                      <a href="https://github.com/Sqyl/YunDaysAPP-Backend" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>后端仓库 YunDaysAPP-Backend</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="exp-item reveal">
+            <div class="t-time">2018 – 2020</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">日语 · 辅修<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">河北工业大学</div>
+            <p class="t-desc">本科期间辅修日语，语言水平见下方证书。</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>2018 – 2020 在河北工业大学辅修日语，系统学习基础文法与听说读写；后通过 JLPT N2，具备日语资料阅读与日常交流能力。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <div class="certs reveal">
+          <span class="certs-label">语言证书</span>
+          <span class="chip chip-accent">IELTS 7.0</span>
+          <span class="chip chip-accent">JLPT N2</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 工作经历（标题点击展开详细说明） ========== -->
+    <section id="career" class="section section-alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-no">02</span>
+          <h2>工作经历</h2>
+          <span class="sec-en">Career</span>
+          <span class="sec-rule" aria-hidden="true"></span>
+        </div>
+        <ol class="timeline">
+          <li class="exp-item reveal">
+            <div class="t-time">2021.7 – 2022.3</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">大客户经理（物联网）<span class="tag tag-solid">正式</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">中国联通天津市分公司</div>
+            <p class="t-desc">行业调研与方案输出，助力部门季度物联网业务完成度同比 +10%、某部门单月业务 +200%。</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>客户需求洞察与方案设计：深入调研天津市多个工业行业，挖掘潜在客户痛点，独立输出工业行业分析报告并被平行业务部门采纳，协助业务研判与客户拓展，帮助部门季度物联网业务完成度同比提升 10%。</p>
+                    <p>产品培训与跨团队支撑：整理物联网产品知识体系，为中心内其他部门提供产品培训与全流程业务支撑（洽谈 → 订单转化 → 交付），实现某部门单月物联网业务提升 200%，协助多部门提前 1–2 个月完成全年专项销售任务。</p>
+                    <p>可迁移能力沉淀：B 端客户需求的理解、跨团队协调，以及把技术产品转译为客户价值的叙事能力。</p>
+                    <p class="t-note">Why 客户经理？入职后公司统一分配到该岗位。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="exp-item reveal">
+            <div class="t-time">2020.5 – 2020.8</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">IP 授权与商务实习生<span class="tag tag-intern">实习</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">腾讯科技（北京）有限公司</div>
+            <p class="t-desc">10+ 份竞品分析报告与竞品知识库，5 份 IP 游戏化初期方案，其中一份推进至系统方案设计阶段。</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>竞品洞察与知识沉淀：针对 H5 小游戏品类的快速增长趋势，独立完成 10+ 份竞品分析报告，搭建竞品分析知识库并持续维护，组织组内培训快速对齐竞品认知，支撑团队 IP 游戏化改编决策。</p>
+                    <p>IP 游戏化方案设计：基于热门 IP 缺乏改编案例的痛点，通过关键词提取 + 竞品匹配的方法，输出 5 份 IP 游戏化初期方案（含作品分析、竞品对标、改编计划），其中某 IP 的玩法脑暴方案被采纳并推进至系统方案设计阶段。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="exp-item reveal">
+            <div class="t-time">2019.7 – 2019.8</div>
+            <h3 class="t-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">网络运维实习生<span class="tag tag-intern">实习</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <div class="t-sub">中国联通河北省廊坊市分公司</div>
+            <p class="t-desc">机房日常运维、用户网络接口信息维护与网络安防演练。</p>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="t-detail">
+                    <p>参与联通网络中心机房日常运维工作：定期巡检机房设备与链路运行状态，负责域内部分用户网络接口信息变更的维护与记录更新，保障用户侧业务的连续与准确。</p>
+                    <p>参加网络安防演练：在演练中实践账号与端口的基础安全排查、异常现象的上报与处置流程，建立了对网络运维安全规范的整体认知。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== 03 项目介绍（卡片点击展开图片与描述） ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-no">03</span>
+          <h2>项目介绍</h2>
+          <span class="sec-en">Projects</span>
+          <span class="sec-rule" aria-hidden="true"></span>
+        </div>
+        <p class="sec-lead reveal">点击卡片查看详情。</p>
+        <div class="grid grid-project">
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="6.8" width="18.4" height="12.4" rx="4"/><path d="M7.3 6.8 4.9 4.2M16.7 6.8l2.4-2.6M8.4 10.6v3.2M15.6 10.6v3.2"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">bilivideo-push · B站视频提取推送工具<span class="tag tag-intern">开源工具</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">监控 UP 主新视频 → 提取 AI 字幕 → LLM 总结 → Webhook 推送（企业微信 / Discord），专为 AI Agent 集成设计的纯 Python 工具。</p>
+            <div class="card-meta">
+              <span>2026.7 · Python · B站 API · LLM · Webhook</span>
+              <a href="https://github.com/Sqyl/bilivideo-push-skill" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">流水线：监控 UP 主新视频 → B 站 AI 字幕提取（SESSDATA 鉴权；新视频字幕未生成时降级为音频下载 + whisper 转写）→ LLM 摘要生成 → 企业微信 / Discord Webhook 推送，一条命令跑完或按需调用单步。</p>
+                  <p class="card-detail">工程化：纯 Python 实现，跨 Windows / macOS / Linux，无需 Chrome 或浏览器插件；pip 一行安装、3 行代码即可接入 Agent 或本地运行；暴露细粒度 API（BilibiliAPI / Summarizer / push），每一步可单独复用。</p>
+                  <p class="card-detail">实践：以该工具支撑日常的 UP 主监控日报，持续产出 B站视频摘要推送。</p>
+                  <div class="chips">
+                    <span class="chip">Python</span><span class="chip">B站 AI 字幕</span><span class="chip">LLM 摘要</span><span class="chip">Webhook</span><span class="chip">企业微信</span><span class="chip">Agent 集成</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 8.5 12l3.5 3.5L17 10.5l4 4"/><path d="M3 21h18"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">A 股量化选股与交易复盘系统<span class="tag tag-intern">AI Agent 协作</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">数据采集 → 漏斗选股 → Regime 动态止损 → 模拟交易 → 盘后复盘推送的全链路个人量化系统。</p>
+            <div class="card-meta">
+              <span>2026.6 – 至今 · Python · 腾讯 / 东财 API · MCP</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">系统构成：腾讯 / 东方财富双数据源的盘后批量与盘中实时采集；漏斗式五层过滤的全市场选股引擎；多因子 Regime 系统与 ATR 动态止损（Regime 自适应）+ 行业分散；实盘模拟交易引擎「小栗子」与盘后复盘、午间速报的定时推送（企业微信机器人 + QQ 机器人 OneBot 协议）；另有港股数据挖掘模块。</p>
+                  <p class="card-detail">AI 接口化：将选股能力封装为 MCP Server，暴露全量扫描 / 查询历史结果 / 实时报价三个工具，可被 AI Agent 直接调用。</p>
+                  <p class="card-detail">协作方式：与 AI Agent 协作开发——本人负责问题定义、方案决策与结果验收，Agent 负责编码实现；过程中的关键工程坑位（指数 / 个股 API 字段差异、数据源限频对策、前复权口径）均已文档化沉淀，可复用。</p>
+                  <div class="chips">
+                    <span class="chip">Python</span><span class="chip">腾讯 · 东财 API</span><span class="chip">Regime 动态止损</span><span class="chip">回测与复盘</span><span class="chip">企微 · QQ 推送</span><span class="chip">MCP Server</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8h3l1.8-2.5h5.4L16.5 8h3A1.5 1.5 0 0 1 21 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-9A1.5 1.5 0 0 1 4.5 8z"/><circle cx="12" cy="13.6" r="3.8"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">随食拍 Suishipai · 智能饮食管理助手<span class="tag tag-solid">硕士毕业课题</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">拍照识餐 + 多 Agent 对话的健康管理助手——从「被动记录」转向「主动干预」，降低健康管理的认知门槛。</p>
+            <div class="card-meta">
+              <span>2026.3 – 2026.7 · Flutter · FastAPI · Qwen MLLM · RAG</span>
+              <span>suishipai.cn · 已下线</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="card-media"><img src="images/suishipai-home.jpg" alt="随食拍产品页截图" loading="lazy"></div>
+                  <p class="card-detail">产品定义与核心链路：主导产品 0 → 1 全流程设计，定义「拍照识别 → 营养分析 → 智能对话 → 健康干预」核心链路；设计「热量银行」游戏化激励机制——日目标为初始余额，盈余生息 5%、透支计息 10%——提升长期留存动力。</p>
+                  <p class="card-detail">AI 能力产品化：推动通义千问多模态大模型在食物识别与营养分析场景落地；设计「数据块 - 语气块分离」响应格式（[DATA] + [TONE] 机制），确保客观数据与 AI 生成内容的解耦与可控；基于 FAISS 搭建本地 RAG 系统，利用用户历史数据持续提升识别准确率。</p>
+                  <p class="card-detail">多 Agent 对话架构：基于意图路由落地营养顾问、健康教练、美食探索者、好朋友四角色，通过 system prompt + temperature + few-shot 在同一 Qwen 底座上实现语气与角色差异化，兼顾产品体验一致性与开发维护成本。</p>
+                  <p class="card-detail">数据驱动迭代：设计健康评分算法（综合热量偏差、宏量营养素比例、记录频率等维度），上线周报自动生成与趋势分析，形成「记录 → 反馈 → 行为改变」闭环。本项目产品设计及全栈开发均由本人独立完成。</p>
+                  <div class="chips">
+                    <span class="chip">Flutter</span><span class="chip">FastAPI</span><span class="chip">MongoDB</span><span class="chip">FAISS</span><span class="chip">Qwen MLLM</span><span class="chip">RAG</span><span class="chip">Docker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9.5h18M3 14.5h18"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">上低音号分镜拆解 · 本地 VLM 多 Agent 流水线<span class="tag tag-intern">实验研究</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">本地视觉模型（LLaVA-7B / Qwen3-VL 4B）+ 多 Agent 流水线，对《吹响！上低音号》13 集 4168 帧逐帧拆解分镜与作画，并延伸出原创 AI 漫剧与角色 LoRA 方案。</p>
+            <div class="card-meta">
+              <span>2026.5 · Ollama · LLaVA / Qwen3-VL · 多 Agent</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">数据与流水线：以原盘素材抽帧，本地 Ollama 部署视觉模型逐帧生成结构化描述（景别 / 人物 / 光影 / 作画）；流水线历经 v1 → v4 四轮迭代——含 LLaVA-7B 与 Qwen3-VL 4B 的模型对比、密度测试与反馈回路优化；1 个编排 Agent + 帧读取 + 4 个分析 Agent（分镜 / 作画 / 人物 / 光影）分工，全 13 集 4168 帧输出每集 JSON + 四份分析报告，并汇总为全系列作画分镜报告。</p>
+                  <p class="card-detail">LoRA 方案（储备）：基于拆解结论整理了角色训练集与 AutoDL 云端一键训练脚本、完整操作指南，作为后续风格化生成的准备——方案与脚本已就绪，尚未实际训练。</p>
+                  <p class="card-detail">原创产出：把拆解出的镜头语言反过来用在创作上——AI 漫剧《逆光之声》，含总设定、10 集分集剧本与全流程制作指南。</p>
+                  <div class="chips">
+                    <span class="chip">Ollama</span><span class="chip">LLaVA-7B</span><span class="chip">Qwen3-VL</span><span class="chip">多 Agent</span><span class="chip">PowerShell</span><span class="chip">LoRA 方案</span><span class="chip">AutoDL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="15" height="7" rx="2.5"/><rect x="7.5" y="6" width="7" height="5" rx="1.5"/><path d="M14.5 8.5H21"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">WarOfTank · 坦克大战<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">纯 C# / WinForms 手写的经典坦克大战复刻。</p>
+            <div class="card-meta">
+              <span>2024.5 – 2024.6 · C# · WinForms · GDI+</span>
+              <a href="https://github.com/Sqyl/WarOfTank" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="photo-grid pg-2">
+                    <figure><img src="images/wot-1.jpg" alt="WarOfTank 游戏截图一" loading="lazy"><figcaption>游戏画面 · 一</figcaption></figure>
+                    <figure><img src="images/wot-2.jpg" alt="WarOfTank 游戏截图二" loading="lazy"><figcaption>游戏画面 · 二</figcaption></figure>
+                    <figure><img src="images/wot-3.jpg" alt="WarOfTank 游戏截图三" loading="lazy"><figcaption>游戏画面 · 三</figcaption></figure>
+                  </div>
+                  <p class="card-detail">游戏框架：以 GDI+ 自绘的游戏循环驱动（Update 调用频率即 FPS），GameObject / Moveable / Unmoveable 构成对象体系，GameObjectManager 统一管理地图、坦克与子弹，SoundManager 管理音效，Running / GameOver 状态机完整。</p>
+                  <p class="card-detail">玩法要素：玩家坦克、敌方坦克与 Boss、可破坏 / 不可破坏墙体、子弹与爆炸特效、基地目标（Target），经典坦克大战要素齐备，无任何游戏引擎依赖。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 17.2l4.8-4.8 3.4 3.4 3.3-3.3 3.5 3.5"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">Stylized Image Content Filling · SD 1.5 风格化内容填充<span class="tag tag-intern">课程科研</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">基于 WikiArt 微调 Stable Diffusion 1.5，评估不同艺术风格下的图像内容再生能力。</p>
+            <div class="card-meta">
+              <span>2024.3 – 2024.4 · Stable Diffusion 1.5 · Fine-tuning · RTX 4090</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">方法：单卡 RTX 4090，使用 WikiArt 数据集对 Stable Diffusion 1.5 进行 Fine-tuning；以「微背景图片」（如大片空白墙体 + 花盆）为测试对象，评估模型对图像内容的再生成能力。</p>
+                  <div class="photo-grid pg-1">
+                    <figure><img src="images/sd-results-1.jpg" alt="风格化内容填充定性结果组一" loading="lazy"><figcaption>定性结果 · 组一</figcaption></figure>
+                    <figure><img src="images/sd-results-2.jpg" alt="风格化内容填充定性结果组二" loading="lazy"><figcaption>定性结果 · 组二</figcaption></figure>
+                  </div>
+                  <p class="card-detail">发现：Impressionism 风格下，更改原图中物体、使其更融入画面风格的能力最强；Rococo 风格下，基于原图语境的内容填充能力最强——例如沿墙面生成雕像与同风格的装修内容。Prompt 消融上，「仅 style」与「style + artist + genre」两种设计方案输出质量未见明显差距。</p>
+                  <p class="card-detail">局限观察：Ukiyo-e（浮世绘）风格的填充倾向于生成一幅带画框、多数时候无法覆盖整个墙面的画作，且对原图既有物品的风格迁移并不明显，暴露了风格化填充的任务偏向。</p>
+                  <p class="card-detail">下一步：LoRA（Low-Rank Adaptation）低秩适配的小参数量微调、横向对比不同文生图模型的性能、验证更多艺术风格的增强效果。</p>
+                  <div class="chips">
+                    <span class="chip">Stable Diffusion 1.5</span><span class="chip">Fine-tuning</span><span class="chip">WikiArt</span><span class="chip">风格评估</span><span class="chip">RTX 4090</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.12s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">Minecraft &amp; Palworld 私服集群<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">N100 迷你主机上的 Docker 游戏服务器集群：2× Minecraft + 1× Palworld，OpenResty 反代 + FRP 内网穿透，支持 IPv6。</p>
+            <div class="card-meta">
+              <span>2024.1 – 2024.4 · Ubuntu · Docker · OpenResty</span>
+              <a href="https://github.com/Sqyl/sqyl_minecraft" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">硬件与网络架构：FTTH 宽带环境下，以畅网微控 N100 V2 迷你 NAS 主机（增配 128G 固态硬盘与 32G DDR5 内存）为承载底座；家宽无公网 IPv4，通过 FRP 内网穿透接入本人的阿里云 ECS 作为公网入口，局域网侧由路由器完成内外网隔离；全部服务同时支持 IPv6 访问。</p>
+                  <p class="card-detail">软件栈：Ubuntu Server 上以 Docker 容器化托管 2 台 Minecraft 服务器与 1 台 Palworld 服务器；OpenResty 统一反向代理，并基于 OpenResty 二次开发，实现 HMCL（Hello Minecraft! Launcher）启动器客户端的自动检测与更新。</p>
+                  <div class="chips">
+                    <span class="chip">Ubuntu Server</span><span class="chip">Docker</span><span class="chip">OpenResty</span><span class="chip">FRP</span><span class="chip">阿里云 ECS</span><span class="chip">IPv6</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8.2 3v4M15.8 3v4"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">YunDays · 学生日程规划 APP<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">本科毕业设计——基于 Android 的日程安排与时间规划应用，前后端分离。</p>
+            <div class="card-meta">
+              <span>2020.12 – 2021.6 · Android · Spring Boot · MySQL</span>
+              <a href="https://github.com/Sqyl/YunDays-APP" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>前端</a>
+              <a href="https://github.com/Sqyl/YunDaysAPP-Backend" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>后端</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="gallery">
+                    <div class="gal-grid">
+                      <figure class="shot"><img src="images/yundays-01-login.png" alt="登录界面" loading="lazy"><figcaption>登录</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-04-schedule-list.png" alt="显示已添加日程的日程界面" loading="lazy"><figcaption>日程 · 列表</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-05-schedule-add.png" alt="添加日程" loading="lazy"><figcaption>日程 · 添加</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-09-schedule-notify.png" alt="对当日日程弹出通知提醒" loading="lazy"><figcaption>日程 · 提醒</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-10-course-home.png" alt="课程页面" loading="lazy"><figcaption>课程 · 页面</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-12-course-info.png" alt="课程信息显示" loading="lazy"><figcaption>课程 · 信息</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-13-daka-timer.png" alt="打卡项页面与计时器" loading="lazy"><figcaption>打卡 · 计时器</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-14-profile.png" alt="个人页面" loading="lazy"><figcaption>个人页面</figcaption></figure>
+                    </div>
+                    <p class="gal-note">打卡模块后续版本新增：发表动态到朋友圈 · 添加好友 · 查看朋友圈</p>
+                  </div>
+                  <p class="card-detail">功能：账号体系、日历日程（闹钟提醒）、课程表、打卡与朋友圈（发表动态 / 添加好友 / 查看朋友圈）、SQLite 离线缓存；后端 Spring Boot + MyBatis + MySQL 三层架构。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04 工作之外（卡片点击展开图片与描述） ========== -->
+    <section id="beyond" class="section section-alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-no">04</span>
+          <h2>工作之外</h2>
+          <span class="sec-en">Beyond Work</span>
+          <span class="sec-rule" aria-hidden="true"></span>
+        </div>
+        <div class="grid grid-hobby">
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9L12 3.5z"/><path d="M18.6 15.6l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">动漫社社长<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">主导多场大型晚会策划与执行，任常驻执行导演、主持。</p>
+            <div class="chips">
+              <span class="chip">晚会策划</span><span class="chip">执行导演</span><span class="chip">主持</span><span class="chip">商务洽谈</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="photo-grid">
+                    <figure><img src="images/event-guofeng-coser.jpg" alt="国风音乐节 coser" loading="lazy"><figcaption>国风音乐节 · coser</figcaption></figure>
+                    <figure><img src="images/event-guofeng-crowd.jpg" alt="国风音乐节现场" loading="lazy"><figcaption>国风音乐节 · 现场</figcaption></figure>
+                    <figure><img src="images/event-guofeng-wota.jpg" alt="国风音乐节 wota 艺节目，本人参演" loading="lazy"><figcaption>国风音乐节 · wota 艺（本人参演）</figcaption></figure>
+                    <figure><img src="images/event-guofeng-stage.jpg" alt="国风音乐节演出" loading="lazy"><figcaption>国风音乐节 · 演出</figcaption></figure>
+                    <figure><img src="images/event-chunyingji.jpg" alt="春樱纪演出" loading="lazy"><figcaption>春樱纪 · 演出</figcaption></figure>
+                    <figure><img src="images/event-qiuriji.jpg" alt="秋日纪活动" loading="lazy"><figcaption>秋日纪</figcaption></figure>
+                  </div>
+                  <p class="gal-note photo-credit">出镜人员均来自河北工业大学漫有引力动漫社与溪云汉服社，图片仅作为活动风貌展示，如涉及形象侵权请<a href="mailto:aaronwongsakura@outlook.com">联系本人</a>。</p>
+                  <p class="card-detail">主导策划网易《楚留香》校园行河北工业大学站暨国风音乐节、迎新晚会暨秋日纪、春樱纪等晚会活动，担任常驻执行导演与主持；国风音乐节中负责与网易方面的合作洽谈，并主导项目落地。</p>
+                  <p class="card-detail">带领团队参演 2018 学年河北工业大学「河工春晚」演出；与团队合作运营校内千人社群及 bilibili、微博等自媒体账号，举办河北工业大学第一届雀魂日式麻将娱乐赛。</p>
+                  <div class="t-links">
+                    <a href="https://www.bilibili.com/video/BV1Ht411d7qP" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#FB7299" aria-hidden="true"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>国风音乐节</a>
+                    <a href="https://www.bilibili.com/video/BV1V9cqexEGd" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#FB7299" aria-hidden="true"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>秋日纪</a>
+                    <a href="https://www.bilibili.com/video/BV1ECcqeAERd" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#FB7299" aria-hidden="true"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>春樱纪</a>
+                    <a href="https://www.bilibili.com/video/BV1EM4y1P7qQ" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#FB7299" aria-hidden="true"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>河工春晚</a>
+                    <a href="https://weibo.com/5677792976/Hk0sZpci1" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#E6162D" aria-hidden="true"><path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"/></svg>雀魂麻将赛 一</a>
+                    <a href="https://weibo.com/5677792976/HkoDTAZk5" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#E6162D" aria-hidden="true"><path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"/></svg>雀魂麻将赛 二</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 13.3A8.2 8.2 0 1 1 10.7 3.8a6.5 6.5 0 0 0 9.5 9.5z"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">研究生会成员<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">参与「月滿中秋 · 中秋游園」企划与现场执行。</p>
+            <div class="chips">
+              <span class="chip">活动企划</span><span class="chip">互动游戏设计</span><span class="chip">纪念品设计</span><span class="chip">现场 NPC</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="car-wrap">
+                    <div class="carousel">
+                      <figure><img src="images/umac-midautumn-npc1.jpg" alt="中秋游园现场 NPC 扮演之一" loading="lazy"><figcaption>现场 NPC · 一</figcaption></figure>
+                      <figure><img src="images/umac-midautumn-npc2.jpg" alt="中秋游园现场 NPC 扮演之二" loading="lazy"><figcaption>现场 NPC · 二</figcaption></figure>
+                      <figure><img src="images/umac-midautumn-group.jpg" alt="中秋游园活动合照" loading="lazy"><figcaption>活动合照</figcaption></figure>
+                    </div>
+                    <div class="car-ctrl">
+                      <button class="car-btn car-prev" type="button" aria-label="上一张"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+                      <div class="car-dots">
+                        <button type="button" class="on" aria-label="第 1 张"></button>
+                        <button type="button" aria-label="第 2 张"></button>
+                        <button type="button" aria-label="第 3 张"></button>
+                      </div>
+                      <button class="car-btn car-next" type="button" aria-label="下一张"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+                    </div>
+                  </div>
+                  <p class="card-detail">研究生会「月滿中秋」系列之「中秋游園」：企划阶段深度参与活动框架搭建与互动游戏设计；执行期间负责纪念品设计与物资采购，并担任现场 NPC。</p>
+                  <div class="t-links">
+                    <a href="https://mp.weixin.qq.com/s/PP82kgJe4KUJ1YZo1o7GWA" target="_blank" rel="noopener"><svg class="brand-icn" viewBox="0 0 24 24" fill="#07C160" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>公众号 · 活动总结</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="8.2" width="18.4" height="10.6" rx="5.3"/><path d="M8 11.4v4.2M5.9 13.5h4.2"/><circle cx="15.4" cy="12.3" r="1" fill="currentColor" stroke="none"/><circle cx="18" cy="14.7" r="1" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">深度游戏玩家<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">近期《伊莫》· 单机最爱《赛博朋克 2077》· 网游 Dota2 · 核聚变多届志愿者</p>
+            <div class="chips">
+              <span class="chip">单机游戏</span><span class="chip">Dota2</span><span class="chip">展会志愿</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="photo-grid pg-2">
+                    <figure><img src="images/game-imo-character.jpg" alt="伊莫分享的角色魅乐薇" loading="lazy"><figcaption>近期游玩 · 伊莫</figcaption></figure>
+                    <figure><img src="images/game-imo-badges.jpg" alt="伊莫徽章全收集" loading="lazy"><figcaption>伊莫 · 徽章全收集</figcaption></figure>
+                    <figure><img src="images/game-fusion2024.jpg" alt="2024 北京核聚变解限机区志愿者合照" loading="lazy"><figcaption>2024 北京核聚变 · 志愿者</figcaption></figure>
+                    <figure><img src="images/game-fusion2025.jpg" alt="2025 北京核聚变现场" loading="lazy"><figcaption>2025 北京核聚变 · 现场</figcaption></figure>
+                    <figure><img src="images/game-pbzero.jpg" alt="影之刃零北京线下试玩会现场" loading="lazy"><figcaption>影之刃零 · 北京试玩会</figcaption></figure>
+                  </div>
+                  <p class="card-detail">近期在玩《伊莫》；单机最爱《赛博朋克 2077》；网络游戏主玩 Dota2。</p>
+                  <p class="card-detail">多次游戏展会志愿服务经历：2021 / 2024 / 2025 及即将到来的 2026 北京核聚变、2024 广州核聚变、2025《影之刃零》北京线下试玩会。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5h8.2v13H7.5z"/><path d="M15.7 7.5h2a1.8 1.8 0 0 1 1.8 1.8v3.9a2 2 0 0 1-2 2h-1.8"/><path d="M7.5 17.5V20h8.2v-2.5"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">吃吃喝喝爱好者<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">日式拉面测评连载 · 精酿啤酒与自酿美式艾尔。</p>
+            <div class="chips">
+              <span class="chip">拉面测评</span><span class="chip">精酿探店</span><span class="chip">自酿艾尔</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="pg-label">吃 · 日式拉面</div>
+                  <div class="photo-grid pg-2">
+                    <figure><img src="images/ramen-shanghai.jpg" alt="上海满吉拉面" loading="lazy"><figcaption>上海 · 满吉（个人最佳）</figcaption></figure>
+                    <figure><img src="images/ramen-tokyo.jpg" alt="东京环七土佐子拉面" loading="lazy"><figcaption>东京 · 环七土佐子</figcaption></figure>
+                    <figure><img src="images/ramen-tianjin.jpg" alt="天津某家拉面" loading="lazy"><figcaption>天津 · 某家曾经的挚爱</figcaption></figure>
+                  </div>
+                  <div class="pg-label">喝 · 精酿啤酒</div>
+                  <div class="photo-grid pg-2">
+                    <figure><img src="images/beer-chumen.jpg" alt="楚门津酿蓝朋友荔枝IPA" loading="lazy"><figcaption>楚门津酿 · 蓝朋友荔枝 IPA</figcaption></figure>
+                    <figure><img src="images/beer-homebrew-glass.jpg" alt="自酿美式艾尔杯中" loading="lazy"><figcaption>自酿美式艾尔 · 杯中</figcaption></figure>
+                    <figure><img src="images/beer-homebrew-bottle.jpg" alt="自酿美式艾尔瓶装" loading="lazy"><figcaption>自酿美式艾尔 · 瓶装</figcaption></figure>
+                    <figure><img src="images/beer-mailuo.jpg" alt="麦落繁星陨落柠檬姜汁古斯" loading="lazy"><figcaption>麦落 · 繁星陨落（柠檬姜汁古斯）</figcaption></figure>
+                  </div>
+                  <p class="card-detail">吃：钟爱探索各地的日式拉面，曾在朋友圈连载拉面测评，收获大量点赞与催更。</p>
+                  <p class="card-detail">喝：主打精酿啤酒——最爱楚门津酿，落地一座新城市的第一件事常常就是去探精酿；除了品酒，还自己动手酿造了一款美式艾尔。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.2 17.8V5.6l10-2v12.1"/><circle cx="6.7" cy="17.8" r="2.5"/><circle cx="16.7" cy="15.7" r="2.5"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">音乐爱好者 / 创作者<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">「林·光」— BOOOM 2022 参赛作品《拾光漫游 Amble For Amber》BGM。</p>
+            <div class="chips">
+              <span class="chip">声乐</span>
+              <span class="chip">编曲</span>
+              <span class="chip">混音</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="card-media"><img src="images/music-cubase-demo.jpg" alt="Cubase 项目界面示意图（AI 生成）" loading="lazy"></div>
+                  <p class="img-note">展示图片仅为演示，非真实项目截图。</p>
+                  <div class="audio-wrap">
+                    <div class="audio-label">BGM 试听 · 拾光漫游 Amble For Amber</div>
+                    <audio controls preload="none" src="audio/Amble-For-Amber-BGM.mp3">你的浏览器不支持音频播放。</audio>
+                  </div>
+                  <p class="card-detail">曲目「林·光」——BOOOM 2022 参赛作品《拾光漫游 Amble For Amber》BGM，编曲与混音在 Cubase 中完成。</p>
+                  <div class="t-links">
+                    <a href="https://www.gcores.com/games/81327" target="_blank" rel="noopener"><img class="brand-icn" src="images/gcores-icon.png" alt="" aria-hidden="true">机核 GCORES · 游戏页面</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 王畅 · 个人主页</p>
+      <p class="footer-links">
+        <a href="https://github.com/sqyl" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:aaronwongsakura@outlook.com">aaronwongsakura@outlook.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js?v=2"></script>
+</body>
+</html>
