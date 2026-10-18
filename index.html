@@ -7,7 +7,7 @@
   <meta name="description" content="Sqyl 的个人主页：学习经历、工作经历、项目介绍与工作之外。">
   <meta name="theme-color" content="#f8f7f4">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230f766e'/%3E%3Ctext%20x='32'%20y='44'%20font-size='36'%20font-family='sans-serif'%20font-weight='700'%20fill='%23fff'%20text-anchor='middle'%3E%E7%8E%8B%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -16,9 +16,9 @@
     <div class="container nav-inner">
       <a class="brand" href="#top">王畅<span class="brand-sub">· 个人主页</span></a>
       <nav class="nav-links" aria-label="页面导航">
+        <a href="#projects">项目介绍</a>
         <a href="#education">学习经历</a>
         <a href="#career">工作经历</a>
-        <a href="#projects">项目介绍</a>
         <a href="#beyond">工作之外</a>
       </nav>
     </div>
@@ -32,19 +32,296 @@
         <p class="hero-kicker">Personal Site · 2026</p>
         <h1>王畅</h1>
         <p class="hero-line">澳门大学 计算机科学硕士 · 2026 届 · 中 / 英 / 日</p>
+        <p class="hero-status">求职中 · LLM 应用 / Agent 开发工程师 · 北京 · 可即时到岗</p>
         <div class="chips hero-chips">
-          <span class="chip">PyTorch</span><span class="chip">Diffusers</span><span class="chip">FAISS</span><span class="chip">RAG</span><span class="chip">Multi-Agent</span><span class="chip">Prompt Engineering</span><span class="chip">AI 协作开发</span>
+          <span class="chip">RAG</span><span class="chip">Multi-Agent</span><span class="chip">MCP</span><span class="chip">MLLM</span><span class="chip">Prompt Engineering</span><span class="chip">工作流编排</span><span class="chip">AI 协作开发</span>
         </div>
         <p class="hero-jp">よろしくお願いします</p>
         <p class="hero-note">标题与卡片均可点击展开详情</p>
       </div>
     </section>
 
-    <!-- ========== 01 学习经历（标题点击展开详细说明） ========== -->
-    <section id="education" class="section">
+    <!-- ========== 03 项目介绍（卡片点击展开图片与描述） ========== -->
+    <section id="projects" class="section">
       <div class="container">
         <div class="sec-head reveal">
           <span class="sec-no">01</span>
+          <h2>项目介绍</h2>
+          <span class="sec-en">Projects</span>
+          <span class="sec-rule" aria-hidden="true"></span>
+        </div>
+        <p class="sec-lead reveal">点击卡片查看详情。</p>
+        <div class="grid grid-project">
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8h3l1.8-2.5h5.4L16.5 8h3A1.5 1.5 0 0 1 21 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-9A1.5 1.5 0 0 1 4.5 8z"/><circle cx="12" cy="13.6" r="3.8"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">随食拍 Suishipai · 智能饮食管理助手<span class="tag tag-solid">硕士毕业课题</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">拍照识餐 + 多 Agent 对话的健康管理助手——从「被动记录」转向「主动干预」，降低健康管理的认知门槛。</p>
+            <div class="card-meta">
+              <span>2026.3 – 2026.7 · Flutter · FastAPI · Qwen MLLM · RAG</span>
+              <span>毕业课题 · 2026.7 交付 · 服务已停运</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="card-media"><img src="images/suishipai-home.jpg" alt="随食拍产品页截图" loading="lazy"></div>
+                  <p class="card-detail">产品定义与核心链路：主导产品 0 → 1 全流程设计，定义「拍照识别 → 营养分析 → 智能对话 → 健康干预」核心链路；设计「热量银行」游戏化激励机制——日目标为初始余额，盈余生息 5%、透支计息 10%——提升长期留存动力。</p>
+                  <p class="card-detail">AI 能力产品化：推动通义千问多模态大模型在食物识别与营养分析场景落地；设计「数据块 - 语气块分离」响应格式（[DATA] + [TONE] 机制），确保客观数据与 AI 生成内容的解耦与可控；基于 FAISS 搭建本地 RAG 系统，利用用户历史数据持续提升识别准确率。</p>
+                  <p class="card-detail">多 Agent 对话架构：基于意图路由落地营养顾问、健康教练、美食探索者、好朋友四角色，通过 system prompt + temperature + few-shot 在同一 Qwen 底座上实现语气与角色差异化，兼顾产品体验一致性与开发维护成本。</p>
+                  <p class="card-detail">数据驱动迭代：设计健康评分算法（综合热量偏差、宏量营养素比例、记录频率等维度），上线周报自动生成与趋势分析，形成「记录 → 反馈 → 行为改变」闭环。本项目产品设计及全栈开发均由本人独立完成。</p>
+                  <div class="chips">
+                    <span class="chip">Flutter</span><span class="chip">FastAPI</span><span class="chip">MongoDB</span><span class="chip">FAISS</span><span class="chip">Qwen MLLM</span><span class="chip">RAG</span><span class="chip">Docker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 8.5 12l3.5 3.5L17 10.5l4 4"/><path d="M3 21h18"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">A 股量化选股与交易复盘系统<span class="tag tag-intern">AI Agent 协作</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">数据采集 → 漏斗选股 → Regime 动态止损 → 模拟交易 → 盘后复盘推送的全链路个人量化系统。</p>
+            <div class="card-meta">
+              <span>2026.6 – 至今 · Python · 腾讯 / 东财 API · MCP</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">系统构成：腾讯 / 东方财富双数据源的盘后批量与盘中实时采集；漏斗式五层过滤的全市场选股引擎；多因子 Regime 系统与 ATR 动态止损（Regime 自适应）+ 行业分散；实盘模拟交易引擎「小栗子」与盘后复盘、午间速报的定时推送（企业微信机器人 + QQ 机器人 OneBot 协议）；另有港股数据挖掘模块。</p>
+                  <p class="card-detail">AI 接口化：将选股能力封装为 MCP Server，暴露全量扫描 / 查询历史结果 / 实时报价三个工具，可被 AI Agent 直接调用。</p>
+                  <p class="card-detail">协作方式：与 AI Agent 协作开发——本人负责问题定义、方案决策与结果验收，Agent 负责编码实现；过程中的关键工程坑位（指数 / 个股 API 字段差异、数据源限频对策、前复权口径）均已文档化沉淀，可复用。</p>
+                  <div class="chips">
+                    <span class="chip">Python</span><span class="chip">腾讯 · 东财 API</span><span class="chip">Regime 动态止损</span><span class="chip">回测与复盘</span><span class="chip">企微 · QQ 推送</span><span class="chip">MCP Server</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9h17M8 4.5v4.5"/><path d="M8.5 13.5h4M8.5 16.5h7"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">化工阀门信息提取 · AI 提效方案设计<span class="tag tag-intern">方案设计</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">为化工行业从业者设计的两阶段提效方案：降级版 GUI 已落地——单条录入 3 分钟 → 20 秒、日均 50 条、核验前错误率 10% → 1%；满血版视觉小模型方案已出，由朋友酌情启用。</p>
+            <div class="card-meta">
+              <span>2026.9 – 至今 · 方案设计 · GUI · 视觉小模型方案</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">背景与痛点：化工行业的朋友希望用 AI 提效工作流，但缺乏落地能力，来找我咨询。他的原流程是：从图纸中找出所有阀门 → 按型号、尺寸等数据翻说明书 PDF，提取对应的 3–4 项参数（每项参数单独成表）→ 填充 Excel。内容枯燥单调，且随注意力衰减，人工核对与填充必然出错；而现阶段没有 AI 能完整完成「识图 + 提取全部阀门相关参数」这件事。</p>
+                  <p class="card-detail">当前阶段（降级版 · 已落地）：GUI 软件已交付并投入使用——内置说明书 PDF 中的数据、支持交互：人工先识别图纸中的阀门信息，通过选择框填入 GUI；点击识别后自动显示说明书中对应的参数，人工核对无误点击添加，后台缓存数据，最后由人工导出 Excel。把「查 PDF + 填表」的机械劳动压到零，人的判断留在识别与核对环节。</p>
+                  <p class="card-detail">实测效果：单条阀门录入 3 分钟 → 20 秒，日均处理约 50 条，核验前错误率由 10% 降至 1%。</p>
+                  <p class="card-detail">未来阶段（满血 AI 版 · 方案已出，由朋友酌情启用）：把已识别过的阀门图片与数据沉淀为数据集，训练视觉小模型接管人工识别图纸；模型识别结果由人工核对后保存回流，形成「识别 → 核对 → 回流训练」的持续迭代闭环。该案例的方法论——降级版先行落地、数据回流、小模型接管——可直接迁移到其他行业的文档 / 图纸处理场景。</p>
+                  <div class="chips">
+                    <span class="chip">方案设计</span><span class="chip">GUI</span><span class="chip">PDF 数据索引</span><span class="chip">Excel 导出</span><span class="chip">数据集构建</span><span class="chip">视觉小模型</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="6.8" width="18.4" height="12.4" rx="4"/><path d="M7.3 6.8 4.9 4.2M16.7 6.8l2.4-2.6M8.4 10.6v3.2M15.6 10.6v3.2"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">bilivideo-push · B站视频提取推送工具<span class="tag tag-intern">开源工具</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">监控 UP 主新视频 → 提取 AI 字幕 → LLM 总结 → Webhook 推送（企业微信 / Discord），专为 AI Agent 集成设计的纯 Python 工具。</p>
+            <div class="card-meta">
+              <span>2026.7 · Python · B站 API · LLM · Webhook</span>
+              <a href="https://github.com/Sqyl/bilivideo-push-skill" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">流水线：监控 UP 主新视频 → B 站 AI 字幕提取（SESSDATA 鉴权；新视频字幕未生成时降级为音频下载 + whisper 转写）→ LLM 摘要生成 → 企业微信 / Discord Webhook 推送，一条命令跑完或按需调用单步。</p>
+                  <p class="card-detail">工程化：纯 Python 实现，跨 Windows / macOS / Linux，无需 Chrome 或浏览器插件；pip 一行安装、3 行代码即可接入 Agent 或本地运行；暴露细粒度 API（BilibiliAPI / Summarizer / push），每一步可单独复用。</p>
+                  <p class="card-detail">实践：以该工具支撑日常的 UP 主监控日报，持续产出 B站视频摘要推送。</p>
+                  <div class="chips">
+                    <span class="chip">Python</span><span class="chip">B站 AI 字幕</span><span class="chip">LLM 摘要</span><span class="chip">Webhook</span><span class="chip">企业微信</span><span class="chip">Agent 集成</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9.5h18M3 14.5h18"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">上低音号分镜拆解 · 本地 VLM 多 Agent 流水线<span class="tag tag-intern">实验研究</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">本地视觉模型（LLaVA-7B / Qwen3-VL 4B）+ 多 Agent 流水线，对《吹响！上低音号》13 集 4168 帧逐帧拆解分镜与作画，并延伸出原创 AI 漫剧与角色 LoRA 方案。</p>
+            <div class="card-meta">
+              <span>2026.5 · Ollama · LLaVA / Qwen3-VL · 多 Agent</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">数据与流水线：以原盘素材抽帧，本地 Ollama 部署视觉模型逐帧生成结构化描述（景别 / 人物 / 光影 / 作画）；流水线历经 v1 → v4 四轮迭代——含 LLaVA-7B 与 Qwen3-VL 4B 的模型对比、密度测试与反馈回路优化；1 个编排 Agent + 帧读取 + 4 个分析 Agent（分镜 / 作画 / 人物 / 光影）分工，全 13 集 4168 帧输出每集 JSON + 四份分析报告，并汇总为全系列作画分镜报告。</p>
+                  <p class="card-detail">LoRA 方案（储备）：基于拆解结论整理了角色训练集与 AutoDL 云端一键训练脚本、完整操作指南，作为后续风格化生成的准备——方案与脚本已就绪，尚未实际训练。</p>
+                  <p class="card-detail">原创产出：把拆解出的镜头语言反过来用在创作上——AI 漫剧《逆光之声》，含总设定、10 集分集剧本与全流程制作指南。</p>
+                  <div class="chips">
+                    <span class="chip">Ollama</span><span class="chip">LLaVA-7B</span><span class="chip">Qwen3-VL</span><span class="chip">多 Agent</span><span class="chip">PowerShell</span><span class="chip">LoRA 方案</span><span class="chip">AutoDL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">邮箱内容管理 Agent · Coze 工作流<span class="tag tag-intern">低代码应用</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">基于 Coze 工作流的邮件管理 Agent：自动分类、关键词提取、内容聚合，多工具协调完成统计与检索。</p>
+            <div class="card-meta">
+              <span>2026.3 · Coze · 低代码 · Agent</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">需求与设计：针对职场邮件处理这一高频、低价值的碎片时间痛点，基于 Coze 工作流设计邮箱内容管理 Agent，实现邮件自动分类、关键词提取与内容聚合展示。</p>
+                  <p class="card-detail">多技能协调：接入天气 API、时间获取、联网搜索等插件工具，Agent 可组合完成「统计当日邮件数」「按关键词检索邮件」等任务。</p>
+                  <p class="card-detail">全流程：完整走通需求分析 → MVP 设计 → 工作流搭建 → 功能上线。</p>
+                  <div class="chips">
+                    <span class="chip">Coze</span><span class="chip">低代码工作流</span><span class="chip">邮件分类</span><span class="chip">插件编排</span><span class="chip">MVP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 17.2l4.8-4.8 3.4 3.4 3.3-3.3 3.5 3.5"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">Stylized Image Content Filling · SD 1.5 风格化内容填充<span class="tag tag-intern">课程科研</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">基于 WikiArt 微调 Stable Diffusion 1.5，评估不同艺术风格下的图像内容再生能力。</p>
+            <div class="card-meta">
+              <span>2024.3 – 2024.4 · Stable Diffusion 1.5 · Fine-tuning · RTX 4090</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">方法：单卡 RTX 4090，使用 WikiArt 数据集对 Stable Diffusion 1.5 进行 Fine-tuning；以「微背景图片」（如大片空白墙体 + 花盆）为测试对象，评估模型对图像内容的再生成能力。</p>
+                  <div class="photo-grid pg-1">
+                    <figure><img src="images/sd-results-1.jpg" alt="风格化内容填充定性结果组一" loading="lazy"><figcaption>定性结果 · 组一</figcaption></figure>
+                    <figure><img src="images/sd-results-2.jpg" alt="风格化内容填充定性结果组二" loading="lazy"><figcaption>定性结果 · 组二</figcaption></figure>
+                  </div>
+                  <p class="card-detail">发现：Impressionism 风格下，更改原图中物体、使其更融入画面风格的能力最强；Rococo 风格下，基于原图语境的内容填充能力最强——例如沿墙面生成雕像与同风格的装修内容。Prompt 消融上，「仅 style」与「style + artist + genre」两种设计方案输出质量未见明显差距。</p>
+                  <p class="card-detail">局限观察：Ukiyo-e（浮世绘）风格的填充倾向于生成一幅带画框、多数时候无法覆盖整个墙面的画作，且对原图既有物品的风格迁移并不明显，暴露了风格化填充的任务偏向。</p>
+                  <p class="card-detail">下一步：LoRA（Low-Rank Adaptation）低秩适配的小参数量微调、横向对比不同文生图模型的性能、验证更多艺术风格的增强效果。</p>
+                  <div class="chips">
+                    <span class="chip">Stable Diffusion 1.5</span><span class="chip">Fine-tuning</span><span class="chip">WikiArt</span><span class="chip">风格评估</span><span class="chip">RTX 4090</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.12s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">Minecraft &amp; Palworld 私服集群<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">N100 迷你主机上的 Docker 游戏服务器集群：2× Minecraft + 1× Palworld，OpenResty 反代 + FRP 内网穿透，支持 IPv6。</p>
+            <div class="card-meta">
+              <span>2024.1 – 2024.4 · Ubuntu · Docker · OpenResty</span>
+              <a href="https://github.com/Sqyl/sqyl_minecraft" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">硬件与网络架构：FTTH 宽带环境下，以畅网微控 N100 V2 迷你 NAS 主机（增配 128G 固态硬盘与 32G DDR5 内存）为承载底座；家宽无公网 IPv4，通过 FRP 内网穿透接入本人的阿里云 ECS 作为公网入口，局域网侧由路由器完成内外网隔离；全部服务同时支持 IPv6 访问。</p>
+                  <p class="card-detail">软件栈：Ubuntu Server 上以 Docker 容器化托管 2 台 Minecraft 服务器与 1 台 Palworld 服务器；OpenResty 统一反向代理，并基于 OpenResty 二次开发，实现 HMCL（Hello Minecraft! Launcher）启动器客户端的自动检测与更新。</p>
+                  <div class="chips">
+                    <span class="chip">Ubuntu Server</span><span class="chip">Docker</span><span class="chip">OpenResty</span><span class="chip">FRP</span><span class="chip">阿里云 ECS</span><span class="chip">IPv6</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal" style="--d:.06s">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="15" height="7" rx="2.5"/><rect x="7.5" y="6" width="7" height="5" rx="1.5"/><path d="M14.5 8.5H21"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">WarOfTank · 坦克大战<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">纯 C# / WinForms 手写的经典坦克大战复刻。</p>
+            <div class="card-meta">
+              <span>2024.5 – 2024.6 · C# · WinForms · GDI+</span>
+              <a href="https://github.com/Sqyl/WarOfTank" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="photo-grid pg-2">
+                    <figure><img src="images/wot-1.jpg" alt="WarOfTank 游戏截图一" loading="lazy"><figcaption>游戏画面 · 一</figcaption></figure>
+                    <figure><img src="images/wot-2.jpg" alt="WarOfTank 游戏截图二" loading="lazy"><figcaption>游戏画面 · 二</figcaption></figure>
+                    <figure><img src="images/wot-3.jpg" alt="WarOfTank 游戏截图三" loading="lazy"><figcaption>游戏画面 · 三</figcaption></figure>
+                  </div>
+                  <p class="card-detail">游戏框架：以 GDI+ 自绘的游戏循环驱动（Update 调用频率即 FPS），GameObject / Moveable / Unmoveable 构成对象体系，GameObjectManager 统一管理地图、坦克与子弹，SoundManager 管理音效，Running / GameOver 状态机完整。</p>
+                  <p class="card-detail">玩法要素：玩家坦克、敌方坦克与 Boss、可破坏 / 不可破坏墙体、子弹与爆炸特效、基地目标（Target），经典坦克大战要素齐备，无任何游戏引擎依赖。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card exp-card exp-item reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8.2 3v4M15.8 3v4"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">YunDays · 学生日程规划 APP<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">本科毕业设计——基于 Android 的日程安排与时间规划应用，前后端分离。</p>
+            <div class="card-meta">
+              <span>2020.12 – 2021.6 · Android · Spring Boot · MySQL</span>
+              <a href="https://github.com/Sqyl/YunDays-APP" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>前端</a>
+              <a href="https://github.com/Sqyl/YunDaysAPP-Backend" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>后端</a>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <div class="gallery">
+                    <div class="gal-grid">
+                      <figure class="shot"><img src="images/yundays-01-login.png" alt="登录界面" loading="lazy"><figcaption>登录</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-04-schedule-list.png" alt="显示已添加日程的日程界面" loading="lazy"><figcaption>日程 · 列表</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-05-schedule-add.png" alt="添加日程" loading="lazy"><figcaption>日程 · 添加</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-09-schedule-notify.png" alt="对当日日程弹出通知提醒" loading="lazy"><figcaption>日程 · 提醒</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-10-course-home.png" alt="课程页面" loading="lazy"><figcaption>课程 · 页面</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-12-course-info.png" alt="课程信息显示" loading="lazy"><figcaption>课程 · 信息</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-13-daka-timer.png" alt="打卡项页面与计时器" loading="lazy"><figcaption>打卡 · 计时器</figcaption></figure>
+                      <figure class="shot"><img src="images/yundays-14-profile.png" alt="个人页面" loading="lazy"><figcaption>个人页面</figcaption></figure>
+                    </div>
+                    <p class="gal-note">打卡模块后续版本新增：发表动态到朋友圈 · 添加好友 · 查看朋友圈</p>
+                  </div>
+                  <p class="card-detail">功能：账号体系、日历日程（闹钟提醒）、课程表、打卡与朋友圈（发表动态 / 添加好友 / 查看朋友圈）、SQLite 离线缓存；后端 Spring Boot + MyBatis + MySQL 三层架构。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========== 01 学习经历（标题点击展开详细说明） ========== -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-no">02</span>
           <h2>学习经历</h2>
           <span class="sec-en">Education</span>
           <span class="sec-rule" aria-hidden="true"></span>
@@ -67,7 +344,7 @@
                       <span class="chip">MLLM</span><span class="chip">Agent</span><span class="chip">RAG</span><span class="chip">APP</span>
                     </div>
                     <div class="t-links">
-                      <span>产品已下线 · suishipai.cn</span>
+                      <span>毕业课题 · 2026.7 交付 · 服务已停运</span>
                     </div>
                   </div>
                 </div>
@@ -125,12 +402,11 @@
         </div>
       </div>
     </section>
-
     <!-- ========== 02 工作经历（标题点击展开详细说明） ========== -->
-    <section id="career" class="section section-alt">
+    <section id="career" class="section">
       <div class="container">
         <div class="sec-head reveal">
-          <span class="sec-no">02</span>
+          <span class="sec-no">03</span>
           <h2>工作经历</h2>
           <span class="sec-en">Career</span>
           <span class="sec-rule" aria-hidden="true"></span>
@@ -195,284 +471,6 @@
         </ol>
       </div>
     </section>
-
-    <!-- ========== 03 项目介绍（卡片点击展开图片与描述） ========== -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="sec-head reveal">
-          <span class="sec-no">03</span>
-          <h2>项目介绍</h2>
-          <span class="sec-en">Projects</span>
-          <span class="sec-rule" aria-hidden="true"></span>
-        </div>
-        <p class="sec-lead reveal">点击卡片查看详情。</p>
-        <div class="grid grid-project">
-          <article class="card card-wide exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9h17M8 4.5v4.5"/><path d="M8.5 13.5h4M8.5 16.5h7"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">化工阀门信息提取 · AI 提效方案设计<span class="tag tag-intern">方案设计</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">为化工行业从业者设计的两阶段提效方案：降级版 GUI 已落地——单条录入 3 分钟 → 20 秒、日均 50 条、核验前错误率 10% → 1%；满血版视觉小模型方案已出，由朋友酌情启用。</p>
-            <div class="card-meta">
-              <span>2026.9 – 至今 · 方案设计 · GUI · 视觉小模型方案</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">背景与痛点：化工行业的朋友希望用 AI 提效工作流，但缺乏落地能力，来找我咨询。他的原流程是：从图纸中找出所有阀门 → 按型号、尺寸等数据翻说明书 PDF，提取对应的 3–4 项参数（每项参数单独成表）→ 填充 Excel。内容枯燥单调，且随注意力衰减，人工核对与填充必然出错；而现阶段没有 AI 能完整完成「识图 + 提取全部阀门相关参数」这件事。</p>
-                  <p class="card-detail">当前阶段（降级版 · 已落地）：GUI 软件已交付并投入使用——内置说明书 PDF 中的数据、支持交互：人工先识别图纸中的阀门信息，通过选择框填入 GUI；点击识别后自动显示说明书中对应的参数，人工核对无误点击添加，后台缓存数据，最后由人工导出 Excel。把「查 PDF + 填表」的机械劳动压到零，人的判断留在识别与核对环节。</p>
-                  <p class="card-detail">实测效果：单条阀门录入 3 分钟 → 20 秒，日均处理约 50 条，核验前错误率由 10% 降至 1%。</p>
-                  <p class="card-detail">未来阶段（满血 AI 版 · 方案已出，由朋友酌情启用）：把已识别过的阀门图片与数据沉淀为数据集，训练视觉小模型接管人工识别图纸；模型识别结果由人工核对后保存回流，形成「识别 → 核对 → 回流训练」的持续迭代闭环。</p>
-                  <div class="chips">
-                    <span class="chip">方案设计</span><span class="chip">GUI</span><span class="chip">PDF 数据索引</span><span class="chip">Excel 导出</span><span class="chip">数据集构建</span><span class="chip">视觉小模型</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card card-wide exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="6.8" width="18.4" height="12.4" rx="4"/><path d="M7.3 6.8 4.9 4.2M16.7 6.8l2.4-2.6M8.4 10.6v3.2M15.6 10.6v3.2"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">bilivideo-push · B站视频提取推送工具<span class="tag tag-intern">开源工具</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">监控 UP 主新视频 → 提取 AI 字幕 → LLM 总结 → Webhook 推送（企业微信 / Discord），专为 AI Agent 集成设计的纯 Python 工具。</p>
-            <div class="card-meta">
-              <span>2026.7 · Python · B站 API · LLM · Webhook</span>
-              <a href="https://github.com/Sqyl/bilivideo-push-skill" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">流水线：监控 UP 主新视频 → B 站 AI 字幕提取（SESSDATA 鉴权；新视频字幕未生成时降级为音频下载 + whisper 转写）→ LLM 摘要生成 → 企业微信 / Discord Webhook 推送，一条命令跑完或按需调用单步。</p>
-                  <p class="card-detail">工程化：纯 Python 实现，跨 Windows / macOS / Linux，无需 Chrome 或浏览器插件；pip 一行安装、3 行代码即可接入 Agent 或本地运行；暴露细粒度 API（BilibiliAPI / Summarizer / push），每一步可单独复用。</p>
-                  <p class="card-detail">实践：以该工具支撑日常的 UP 主监控日报，持续产出 B站视频摘要推送。</p>
-                  <div class="chips">
-                    <span class="chip">Python</span><span class="chip">B站 AI 字幕</span><span class="chip">LLM 摘要</span><span class="chip">Webhook</span><span class="chip">企业微信</span><span class="chip">Agent 集成</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card card-wide exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 8.5 12l3.5 3.5L17 10.5l4 4"/><path d="M3 21h18"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">A 股量化选股与交易复盘系统<span class="tag tag-intern">AI Agent 协作</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">数据采集 → 漏斗选股 → Regime 动态止损 → 模拟交易 → 盘后复盘推送的全链路个人量化系统。</p>
-            <div class="card-meta">
-              <span>2026.6 – 至今 · Python · 腾讯 / 东财 API · MCP</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">系统构成：腾讯 / 东方财富双数据源的盘后批量与盘中实时采集；漏斗式五层过滤的全市场选股引擎；多因子 Regime 系统与 ATR 动态止损（Regime 自适应）+ 行业分散；实盘模拟交易引擎「小栗子」与盘后复盘、午间速报的定时推送（企业微信机器人 + QQ 机器人 OneBot 协议）；另有港股数据挖掘模块。</p>
-                  <p class="card-detail">AI 接口化：将选股能力封装为 MCP Server，暴露全量扫描 / 查询历史结果 / 实时报价三个工具，可被 AI Agent 直接调用。</p>
-                  <p class="card-detail">协作方式：与 AI Agent 协作开发——本人负责问题定义、方案决策与结果验收，Agent 负责编码实现；过程中的关键工程坑位（指数 / 个股 API 字段差异、数据源限频对策、前复权口径）均已文档化沉淀，可复用。</p>
-                  <div class="chips">
-                    <span class="chip">Python</span><span class="chip">腾讯 · 东财 API</span><span class="chip">Regime 动态止损</span><span class="chip">回测与复盘</span><span class="chip">企微 · QQ 推送</span><span class="chip">MCP Server</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card card-wide exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8h3l1.8-2.5h5.4L16.5 8h3A1.5 1.5 0 0 1 21 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-9A1.5 1.5 0 0 1 4.5 8z"/><circle cx="12" cy="13.6" r="3.8"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">随食拍 Suishipai · 智能饮食管理助手<span class="tag tag-solid">硕士毕业课题</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">拍照识餐 + 多 Agent 对话的健康管理助手——从「被动记录」转向「主动干预」，降低健康管理的认知门槛。</p>
-            <div class="card-meta">
-              <span>2026.3 – 2026.7 · Flutter · FastAPI · Qwen MLLM · RAG</span>
-              <span>suishipai.cn · 已下线</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <div class="card-media"><img src="images/suishipai-home.jpg" alt="随食拍产品页截图" loading="lazy"></div>
-                  <p class="card-detail">产品定义与核心链路：主导产品 0 → 1 全流程设计，定义「拍照识别 → 营养分析 → 智能对话 → 健康干预」核心链路；设计「热量银行」游戏化激励机制——日目标为初始余额，盈余生息 5%、透支计息 10%——提升长期留存动力。</p>
-                  <p class="card-detail">AI 能力产品化：推动通义千问多模态大模型在食物识别与营养分析场景落地；设计「数据块 - 语气块分离」响应格式（[DATA] + [TONE] 机制），确保客观数据与 AI 生成内容的解耦与可控；基于 FAISS 搭建本地 RAG 系统，利用用户历史数据持续提升识别准确率。</p>
-                  <p class="card-detail">多 Agent 对话架构：基于意图路由落地营养顾问、健康教练、美食探索者、好朋友四角色，通过 system prompt + temperature + few-shot 在同一 Qwen 底座上实现语气与角色差异化，兼顾产品体验一致性与开发维护成本。</p>
-                  <p class="card-detail">数据驱动迭代：设计健康评分算法（综合热量偏差、宏量营养素比例、记录频率等维度），上线周报自动生成与趋势分析，形成「记录 → 反馈 → 行为改变」闭环。本项目产品设计及全栈开发均由本人独立完成。</p>
-                  <div class="chips">
-                    <span class="chip">Flutter</span><span class="chip">FastAPI</span><span class="chip">MongoDB</span><span class="chip">FAISS</span><span class="chip">Qwen MLLM</span><span class="chip">RAG</span><span class="chip">Docker</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9.5h18M3 14.5h18"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">上低音号分镜拆解 · 本地 VLM 多 Agent 流水线<span class="tag tag-intern">实验研究</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">本地视觉模型（LLaVA-7B / Qwen3-VL 4B）+ 多 Agent 流水线，对《吹响！上低音号》13 集 4168 帧逐帧拆解分镜与作画，并延伸出原创 AI 漫剧与角色 LoRA 方案。</p>
-            <div class="card-meta">
-              <span>2026.5 · Ollama · LLaVA / Qwen3-VL · 多 Agent</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">数据与流水线：以原盘素材抽帧，本地 Ollama 部署视觉模型逐帧生成结构化描述（景别 / 人物 / 光影 / 作画）；流水线历经 v1 → v4 四轮迭代——含 LLaVA-7B 与 Qwen3-VL 4B 的模型对比、密度测试与反馈回路优化；1 个编排 Agent + 帧读取 + 4 个分析 Agent（分镜 / 作画 / 人物 / 光影）分工，全 13 集 4168 帧输出每集 JSON + 四份分析报告，并汇总为全系列作画分镜报告。</p>
-                  <p class="card-detail">LoRA 方案（储备）：基于拆解结论整理了角色训练集与 AutoDL 云端一键训练脚本、完整操作指南，作为后续风格化生成的准备——方案与脚本已就绪，尚未实际训练。</p>
-                  <p class="card-detail">原创产出：把拆解出的镜头语言反过来用在创作上——AI 漫剧《逆光之声》，含总设定、10 集分集剧本与全流程制作指南。</p>
-                  <div class="chips">
-                    <span class="chip">Ollama</span><span class="chip">LLaVA-7B</span><span class="chip">Qwen3-VL</span><span class="chip">多 Agent</span><span class="chip">PowerShell</span><span class="chip">LoRA 方案</span><span class="chip">AutoDL</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">邮箱内容管理 Agent · Coze 工作流<span class="tag tag-intern">低代码应用</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">基于 Coze 工作流的邮件管理 Agent：自动分类、关键词提取、内容聚合，多工具协调完成统计与检索。</p>
-            <div class="card-meta">
-              <span>2026.3 · Coze · 低代码 · Agent</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">需求与设计：针对职场邮件处理耗时高的痛点（周均约占工作时间的 12.5%），基于 Coze 工作流设计邮箱内容管理 Agent，实现邮件自动分类、关键词提取与内容聚合展示。</p>
-                  <p class="card-detail">多技能协调：接入天气 API、时间获取、联网搜索等插件工具，Agent 可组合完成「统计当日邮件数」「按关键词检索邮件」等任务。</p>
-                  <p class="card-detail">全流程：完整走通需求分析 → MVP 设计 → 工作流搭建 → 功能上线。</p>
-                  <div class="chips">
-                    <span class="chip">Coze</span><span class="chip">低代码工作流</span><span class="chip">邮件分类</span><span class="chip">插件编排</span><span class="chip">MVP</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal" style="--d:.06s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="15" height="7" rx="2.5"/><rect x="7.5" y="6" width="7" height="5" rx="1.5"/><path d="M14.5 8.5H21"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">WarOfTank · 坦克大战<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">纯 C# / WinForms 手写的经典坦克大战复刻。</p>
-            <div class="card-meta">
-              <span>2024.5 – 2024.6 · C# · WinForms · GDI+</span>
-              <a href="https://github.com/Sqyl/WarOfTank" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <div class="photo-grid pg-2">
-                    <figure><img src="images/wot-1.jpg" alt="WarOfTank 游戏截图一" loading="lazy"><figcaption>游戏画面 · 一</figcaption></figure>
-                    <figure><img src="images/wot-2.jpg" alt="WarOfTank 游戏截图二" loading="lazy"><figcaption>游戏画面 · 二</figcaption></figure>
-                    <figure><img src="images/wot-3.jpg" alt="WarOfTank 游戏截图三" loading="lazy"><figcaption>游戏画面 · 三</figcaption></figure>
-                  </div>
-                  <p class="card-detail">游戏框架：以 GDI+ 自绘的游戏循环驱动（Update 调用频率即 FPS），GameObject / Moveable / Unmoveable 构成对象体系，GameObjectManager 统一管理地图、坦克与子弹，SoundManager 管理音效，Running / GameOver 状态机完整。</p>
-                  <p class="card-detail">玩法要素：玩家坦克、敌方坦克与 Boss、可破坏 / 不可破坏墙体、子弹与爆炸特效、基地目标（Target），经典坦克大战要素齐备，无任何游戏引擎依赖。</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal" style="--d:.06s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 17.2l4.8-4.8 3.4 3.4 3.3-3.3 3.5 3.5"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">Stylized Image Content Filling · SD 1.5 风格化内容填充<span class="tag tag-intern">课程科研</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">基于 WikiArt 微调 Stable Diffusion 1.5，评估不同艺术风格下的图像内容再生能力。</p>
-            <div class="card-meta">
-              <span>2024.3 – 2024.4 · Stable Diffusion 1.5 · Fine-tuning · RTX 4090</span>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">方法：单卡 RTX 4090，使用 WikiArt 数据集对 Stable Diffusion 1.5 进行 Fine-tuning；以「微背景图片」（如大片空白墙体 + 花盆）为测试对象，评估模型对图像内容的再生成能力。</p>
-                  <div class="photo-grid pg-1">
-                    <figure><img src="images/sd-results-1.jpg" alt="风格化内容填充定性结果组一" loading="lazy"><figcaption>定性结果 · 组一</figcaption></figure>
-                    <figure><img src="images/sd-results-2.jpg" alt="风格化内容填充定性结果组二" loading="lazy"><figcaption>定性结果 · 组二</figcaption></figure>
-                  </div>
-                  <p class="card-detail">发现：Impressionism 风格下，更改原图中物体、使其更融入画面风格的能力最强；Rococo 风格下，基于原图语境的内容填充能力最强——例如沿墙面生成雕像与同风格的装修内容。Prompt 消融上，「仅 style」与「style + artist + genre」两种设计方案输出质量未见明显差距。</p>
-                  <p class="card-detail">局限观察：Ukiyo-e（浮世绘）风格的填充倾向于生成一幅带画框、多数时候无法覆盖整个墙面的画作，且对原图既有物品的风格迁移并不明显，暴露了风格化填充的任务偏向。</p>
-                  <p class="card-detail">下一步：LoRA（Low-Rank Adaptation）低秩适配的小参数量微调、横向对比不同文生图模型的性能、验证更多艺术风格的增强效果。</p>
-                  <div class="chips">
-                    <span class="chip">Stable Diffusion 1.5</span><span class="chip">Fine-tuning</span><span class="chip">WikiArt</span><span class="chip">风格评估</span><span class="chip">RTX 4090</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal" style="--d:.12s">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">Minecraft &amp; Palworld 私服集群<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">N100 迷你主机上的 Docker 游戏服务器集群：2× Minecraft + 1× Palworld，OpenResty 反代 + FRP 内网穿透，支持 IPv6。</p>
-            <div class="card-meta">
-              <span>2024.1 – 2024.4 · Ubuntu · Docker · OpenResty</span>
-              <a href="https://github.com/Sqyl/sqyl_minecraft" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <p class="card-detail">硬件与网络架构：FTTH 宽带环境下，以畅网微控 N100 V2 迷你 NAS 主机（增配 128G 固态硬盘与 32G DDR5 内存）为承载底座；家宽无公网 IPv4，通过 FRP 内网穿透接入本人的阿里云 ECS 作为公网入口，局域网侧由路由器完成内外网隔离；全部服务同时支持 IPv6 访问。</p>
-                  <p class="card-detail">软件栈：Ubuntu Server 上以 Docker 容器化托管 2 台 Minecraft 服务器与 1 台 Palworld 服务器；OpenResty 统一反向代理，并基于 OpenResty 二次开发，实现 HMCL（Hello Minecraft! Launcher）启动器客户端的自动检测与更新。</p>
-                  <div class="chips">
-                    <span class="chip">Ubuntu Server</span><span class="chip">Docker</span><span class="chip">OpenResty</span><span class="chip">FRP</span><span class="chip">阿里云 ECS</span><span class="chip">IPv6</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card exp-card exp-item reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8.2 3v4M15.8 3v4"/></svg>
-            </div>
-            <h3 class="card-title">
-              <button class="exp-toggle" type="button" aria-expanded="false">YunDays · 学生日程规划 APP<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-            </h3>
-            <p class="card-desc">本科毕业设计——基于 Android 的日程安排与时间规划应用，前后端分离。</p>
-            <div class="card-meta">
-              <span>2020.12 – 2021.6 · Android · Spring Boot · MySQL</span>
-              <a href="https://github.com/Sqyl/YunDays-APP" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>前端</a>
-              <a href="https://github.com/Sqyl/YunDaysAPP-Backend" target="_blank" rel="noopener"><svg class="gh-icn" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>后端</a>
-            </div>
-            <div class="exp">
-              <div class="exp-body">
-                <div class="exp-inner">
-                  <div class="gallery">
-                    <div class="gal-grid">
-                      <figure class="shot"><img src="images/yundays-01-login.png" alt="登录界面" loading="lazy"><figcaption>登录</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-04-schedule-list.png" alt="显示已添加日程的日程界面" loading="lazy"><figcaption>日程 · 列表</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-05-schedule-add.png" alt="添加日程" loading="lazy"><figcaption>日程 · 添加</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-09-schedule-notify.png" alt="对当日日程弹出通知提醒" loading="lazy"><figcaption>日程 · 提醒</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-10-course-home.png" alt="课程页面" loading="lazy"><figcaption>课程 · 页面</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-12-course-info.png" alt="课程信息显示" loading="lazy"><figcaption>课程 · 信息</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-13-daka-timer.png" alt="打卡项页面与计时器" loading="lazy"><figcaption>打卡 · 计时器</figcaption></figure>
-                      <figure class="shot"><img src="images/yundays-14-profile.png" alt="个人页面" loading="lazy"><figcaption>个人页面</figcaption></figure>
-                    </div>
-                    <p class="gal-note">打卡模块后续版本新增：发表动态到朋友圈 · 添加好友 · 查看朋友圈</p>
-                  </div>
-                  <p class="card-detail">功能：账号体系、日历日程（闹钟提醒）、课程表、打卡与朋友圈（发表动态 / 添加好友 / 查看朋友圈）、SQLite 离线缓存；后端 Spring Boot + MyBatis + MySQL 三层架构。</p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ========== 04 工作之外（卡片点击展开图片与描述） ========== -->
     <section id="beyond" class="section section-alt">
       <div class="container">

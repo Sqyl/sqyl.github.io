@@ -154,6 +154,15 @@ section[id] { scroll-margin-top: 84px; }
 
 .hero-line { margin: 16px 0 0; font-size: 17px; color: var(--muted); }
 
+/* 求职状态横幅 */
+.hero-status {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
 /* 首屏 AI 工具链徽章 */
 .hero-chips { justify-content: center; margin-top: 22px; }
 
