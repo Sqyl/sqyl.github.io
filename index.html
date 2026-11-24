@@ -81,6 +81,30 @@
           </article>
           <article class="card card-wide exp-card exp-item reveal">
             <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg>
+            </div>
+            <h3 class="card-title">
+              <button class="exp-toggle" type="button" aria-expanded="false">LangGraph Agent · 命令行助手<span class="tag tag-intern">个人项目</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            </h3>
+            <p class="card-desc">手写 ReAct 工具调用回路，支持终端流式输出、危险工具人工审批与跨进程会话恢复。</p>
+            <div class="card-meta">
+              <span>Python · LangGraph · SQLite</span>
+            </div>
+            <div class="exp">
+              <div class="exp-body">
+                <div class="exp-inner">
+                  <p class="card-detail">核心实现：手写模型与工具节点，通过 <code>ToolMessage</code> 按调用 ID 将工具结果回传模型。CLI 流式显示模型输出；危险工具调用会暂停等待人工确认。SQLite 按 <code>thread_id</code> 保存检查点，复用同一会话 ID 即可在新进程恢复历史。</p>
+                  <p class="card-detail">验证：9 条离线机制回归通过，覆盖工具回路、审批、流式事件与会话恢复。真实模型小样本按规则评分并支持逐例基线比较，glm-5.1 首轮基线 5/5 通过。</p>
+                  <p class="card-detail">进行中：本地笔记 RAG 目前处于文档加载切分与词法检索阶段，尚未接入 Agent。</p>
+                  <div class="chips">
+                    <span class="chip">ReAct</span><span class="chip">人工审批</span><span class="chip">流式 CLI</span><span class="chip">离线回归</span><span class="chip">模型评测</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card card-wide exp-card exp-item reveal">
+            <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 8.5 12l3.5 3.5L17 10.5l4 4"/><path d="M3 21h18"/></svg>
             </div>
             <h3 class="card-title">
