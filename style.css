@@ -337,6 +337,32 @@ section[id] { scroll-margin-top: 84px; }
 
 .card-meta a { color: var(--accent-deep); transition: color 0.18s ease; }
 .card-meta a:hover { color: var(--accent); }
+.project-evidence { color: var(--accent-deep); font-weight: 600; }
+
+/* 其他项目默认折叠；不干扰每张卡片的详情按钮 */
+.project-archive { margin-top: 16px; }
+.project-archive-toggle {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.project-archive-toggle::-webkit-details-marker { display: none; }
+.project-archive-toggle:hover { color: var(--accent-deep); }
+.project-archive-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.project-archive-count { color: var(--muted); font-size: 12px; font-weight: 400; }
+.project-archive-toggle .chev { margin-left: auto; }
+.project-archive[open] > .project-archive-toggle .chev { transform: rotate(180deg); }
+.project-archive:not([open]) > .grid { display: none; }
+.project-archive > .grid { margin-top: 16px; }
 
 /* 占位卡片（项目待补充）：虚线样式、无悬停动效 */
 .card-tbd { border-style: dashed; background: transparent; }
